@@ -1,5 +1,6 @@
 # bound-sensor
-Get inform once an element boundary changes in Angular
+Get inform once an element parent's boundary changes in Angular2.
+This is very usefull to refresh a component if the size of `width` or `height` of its container changes.
 
 ## Usage
 First import `BoundSensorModule` to your application module
