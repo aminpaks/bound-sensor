@@ -1,6 +1,6 @@
 {
   "name": "bound-sensor",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Find out once element size changes",
   "main": "dist/bound-sensor.js",
   "types": "./dist/bound-sensor.d.ts",
