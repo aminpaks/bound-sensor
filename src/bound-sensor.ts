@@ -13,7 +13,7 @@ import {
     selector: '[boundSensor]',
 })
 export class BoundSensorDirective implements OnInit, OnDestroy {
-    @Input() BoundSensor: string;
+    @Input() boundSensor: string;
     private element: HTMLElement;
     private frame: HTMLIFrameElement;
     private timeout: NodeJS.Timer;
@@ -23,7 +23,7 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
     }
 
     ngOnInit() {
-        if (this.BoundSensor) {
+        if (this.boundSensor) {
             const parent = this.element.parentElement;
 
             if (parent) {
@@ -48,7 +48,8 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
 
     ngOnDestroy() {
         if (this.frame) {
-            this.frame.removeEventListener('resize', this.onResize.bind(this));
+            this.frame.parentElement.style.position = '';
+            this.frame.contentWindow.removeEventListener('resize', this.onResize.bind(this));
             this.frame.remove();
             this.frame = undefined;
         }
@@ -60,7 +61,7 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
             this.timeout = undefined;
         }
         this.timeout = setTimeout(() => {
-            const event = new CustomEvent(this.BoundSensor, {
+            const event = new CustomEvent(this.boundSensor, {
                 detail: {
                     width: this.frame.clientWidth,
                     height: this.frame.clientHeight,
