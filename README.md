@@ -32,3 +32,6 @@ class SimpleComponent {
   }
 }
 ```
+
+
+Thanks to [nasreddineskandrani](https://github.com/nasreddineskandrani)
