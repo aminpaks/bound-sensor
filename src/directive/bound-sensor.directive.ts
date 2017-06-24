@@ -1,7 +1,6 @@
 import {
     Input,
     Output,
-    NgModule,
     Directive,
     ElementRef,
     Inject,
@@ -16,7 +15,7 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
     @Input() boundSensor: string;
     private element: HTMLElement;
     private frame: HTMLIFrameElement;
-    private timeout: NodeJS.Timer;
+    private timeout: number;
 
     constructor(@Inject(ElementRef) elementRef: ElementRef) {
         this.element = elementRef.nativeElement;
@@ -60,7 +59,7 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
             clearTimeout(this.timeout);
             this.timeout = undefined;
         }
-        this.timeout = setTimeout(() => {
+        this.timeout = window.setTimeout(() => {
             const event = new CustomEvent(this.boundSensor, {
                 detail: {
                     width: this.frame.clientWidth,
@@ -75,9 +74,3 @@ export class BoundSensorDirective implements OnInit, OnDestroy {
         }, 100);
     }
 }
-
-@NgModule({
-    declarations: [ BoundSensorDirective ],
-    exports: [ BoundSensorDirective ],
-})
-export class BoundSensorModule {}

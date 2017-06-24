@@ -1,6 +1,11 @@
-tsconfig.json
-tslint.json
+.editorconfig
 .gitignore
 .npmignore
-src/*.js
-src/*.js.map
+/node_modules
+/out-tsc
+/src
+tsconfig*.json
+tslint.json
+yarn.lock
+build.js
+*.ts
