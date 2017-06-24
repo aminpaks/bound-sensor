@@ -25,7 +25,7 @@
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true,
         "annotateForClosureCompiler": true,
-        "flatModuleOutFile": "bound-sensor.es5.js",
+        "flatModuleOutFile": "bound-sensor.js",
         "flatModuleId": "bound-sensor",
         "genDir": "../"
     }

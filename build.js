@@ -45,7 +45,7 @@ return Promise.resolve()
   // Bundle lib.
   .then(() => {
     // Base configuration.
-    const es5Entry = path.join(es5OutputFolder, `${libName}.es5.js`);
+    const es5Entry = path.join(es5OutputFolder, `${libName}.js`);
     const es2015Entry = path.join(es2015OutputFolder, `${libName}.js`);
 
     // UMD bundle.

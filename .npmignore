@@ -4,6 +4,7 @@
 /node_modules
 /out-tsc
 /src
+rollup.config.js
 tsconfig*.json
 tslint.json
 yarn.lock
