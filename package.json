@@ -1,6 +1,6 @@
 {
   "name": "bound-sensor",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "Find out once element size changes",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",

@@ -1,12 +1,20 @@
+# Globals
 .editorconfig
 .gitignore
 .npmignore
+
+# Node & Build
 /node_modules
 /out-tsc
+
+# Source
+!*.d.ts
 /src
+index.ts
+
+# Configs
 rollup.config.js
 tsconfig*.json
 tslint.json
 yarn.lock
 build.js
-*.ts
