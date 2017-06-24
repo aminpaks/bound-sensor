@@ -4,7 +4,7 @@ This is very usefull to refresh a component if the size of `width` or `height` o
 
 ## Usage
 First import `BoundSensorModule` to your application module
-```
+```ts
 import { BoundSensorModule } from 'bound-sensor';
 
 @NgModule({
@@ -16,22 +16,26 @@ import { BoundSensorModule } from 'bound-sensor';
 export class AppModule { }
 ```
 then add the directive to your component (`resize` is the name of event, you may name it anything):
-```
+```ts
 <simple boundSensor="resize"></simple>
 ```
-and receive the event by `HotListener`:
-```
+and receive the event by `HostListener`:
+```ts
 @Component({
   selector: 'simple'
   (...)
 })
 class SimpleComponent {
-  @HotListener('resize', ['$event'])
+  @HostListener('resize', ['$event'])
   onResize(event) {
     console.log(event.detail);
   }
 }
 ```
 
+## Demo
+Take a look at this [working example at plunker](http://embed.plnkr.co/kYRXPHT6rHc7dcLw0Pxo/)
 
-Thanks to [nasreddineskandrani](https://github.com/nasreddineskandrani)
+
+### Credits
+Thanks to [@nasreddineskandrani](https://github.com/nasreddineskandrani)
