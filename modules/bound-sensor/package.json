@@ -1,6 +1,6 @@
 {
   "name": "bound-sensor",
-  "version": "1.0.2",
+  "version": "1.0.0",
   "description": "BoundSensor is a JavaScript library to be notified if a DOM boundary changes in browser.",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
@@ -17,10 +17,7 @@
     "build:rollup": "node rollup-build.js",
     "bundle": "npm-run-all clean build:*"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/aminpaks/bound-sensor.git"
-  },
+  "repository": "https://github.com/aminpaks/bound-sensor/tree/master/modules/bound-sensor",
   "keywords": [
     "javascript bound sensor",
     "resize sensor",

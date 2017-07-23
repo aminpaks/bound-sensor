@@ -4,6 +4,6 @@
     "examples/*",
     "modules/*"
   ],
-  "npmClient": "npm",
+  "npmClient": "yarn",
   "version": "1.0.1"
 }

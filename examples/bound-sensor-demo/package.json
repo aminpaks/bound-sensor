@@ -1,9 +1,9 @@
 {
   "name": "bound-sensor-demo",
   "private": true,
+  "version": "1.0.0",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
-  "version": "1.0.0",
   "scripts": {
     "start": "webpack-dev-server"
   },

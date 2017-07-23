@@ -45,3 +45,6 @@ window.setTimeout(function () {
 
 // That's it!
 ```
+
+## Example
+You can checkout a [demo here](https://github.com/aminpaks/bound-sensor/tree/master/examples/bound-sensor-demo).
