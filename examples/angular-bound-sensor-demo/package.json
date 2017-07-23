@@ -1,7 +1,7 @@
 {
   "name": "angular-bound-sensor-demo",
   "private": true,
-  "version": "1.0.0",
+  "version": "1.0.2",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
   "scripts": {
@@ -23,9 +23,9 @@
     "@angular/platform-browser": "^4.3.1",
     "@angular/platform-browser-dynamic": "^4.3.1",
     "@angular/router": "^4.3.1",
-    "angular-bound-sensor": "^1.0.0",
-    "bound-sensor": "^1.0.0",
+    "angular-bound-sensor": "^1.0.2",
     "awesome-typescript-loader": "^3.2.1",
+    "bound-sensor": "^1.0.2",
     "core-js": "^2.4.1",
     "reflect-metadata": "^0.1.10",
     "rxjs": "^5.4.2",
