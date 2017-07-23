@@ -14,9 +14,6 @@
     "paths": {
       "root/*": [
         "src/app/*"
-      ],
-      "angular-bound-sensor": [
-        "angular-bound-sensor/src/index"
       ]
     },
     "lib": [
