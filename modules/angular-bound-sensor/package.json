@@ -5,8 +5,8 @@
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
   "main": "dist/bundles/angular-bound-sensor.umd.min.js",
-  "module": "dist/index.es5.js",
-  "es2015": "dist/index.js",
+  "module": "dist/angular-bound-sensor.es5.js",
+  "es2015": "dist/angular-bound-sensor.js",
   "types": "dist/index.d.ts",
   "scripts": {
     "clean": "npm-run-all clean:*",

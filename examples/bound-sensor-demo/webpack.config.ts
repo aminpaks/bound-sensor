@@ -1,9 +1,9 @@
 import * as path from 'path';
-import * as webpack from 'webpack';
+import { Configuration, ProgressPlugin, HotModuleReplacementPlugin } from 'webpack';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-const config: webpack.Configuration = {
+const config: Configuration = {
   devtool: 'source-map',
   entry: {
     main: './src/index',
@@ -14,14 +14,14 @@ const config: webpack.Configuration = {
     filename: '[name].bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.js', '.less', '.css', '.html'],
+    extensions: ['.ts', '.js', '.css', '.html'],
   },
   module: {
     rules: [
       {
         test: /\.ts$/,
         use: [
-          { loader: 'ts-loader', options: { configFileName: './tsconfig.json' } },
+          { loader: 'ts-loader', options: { logLevel: 'warn' } },
         ],
         exclude: [/\.(spec|e2e)\.ts$/]
       }, {
@@ -34,12 +34,13 @@ const config: webpack.Configuration = {
     ],
   },
   plugins: [
+    new ProgressPlugin(),
     new BundleAnalyzerPlugin({
       openAnalyzer: false,
     }),
-    new webpack.HotModuleReplacementPlugin(),
+    new HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
-      template: path.resolve('static', 'index.template'),
+      template: path.resolve('static', 'index.ejs'),
       inject: 'body',
     }),
   ],
@@ -47,6 +48,7 @@ const config: webpack.Configuration = {
     hot: true,
     inline: true,
     compress: true,
+    stats: 'minimal',
     contentBase: path.join(__dirname, 'static')
   }
 };
