@@ -1,0 +1,20 @@
+<div class="main-container">
+  <h2>Demo - Attaching sensor to component boundary</h2>
+  <div class="description">
+    <p>AngularBoundSensor was attached to this component as following example below:</p>
+    <pre><code [innerHtml]="safeValues.compSample"></code></pre>
+    <p>You also can pass the settings by passing an object to the directive:</p>
+    <pre><code [innerHtml]="safeValues.settingSample"></code></pre>
+  </div>
+  <div class="size">
+    <div>My boundary size: {{myBoundSize}}</div>
+    <div>My child boundary size: {{myChildBoundSize}}</div>
+    <button (click)="dynamicContent()" [disabled]="!dynamicContentEnable">Add random contents</button>
+    <button (click)="toggleFlexbox()">Toggle Flexbox</button>
+  </div>
+  <div class="dynamic-content" *ngIf="content.length > 0" [innerHtml]="content"></div>
+</div>
+<simple-child-component boundSensor></simple-child-component>
+<div class="notifications" *ngIf="notifications.length > 0">
+  <simple-notification *ngFor="let item of notifications" [size]="item.size" [hostName]="item.hostName"></simple-notification>
+</div>

@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist",
+    "baseUrl": ".",
+    "target": "es5",
+    "module": "commonjs",
+    "sourceMap": true,
+    "declaration": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "noImplicitAny": false,
+    "noUnusedLocals": true,
+    "paths": {
+      "root/*": [
+        "src/app/*"
+      ],
+      "angular-bound-sensor": [
+        "angular-bound-sensor/src/index"
+      ]
+    },
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ]
+  }
+}

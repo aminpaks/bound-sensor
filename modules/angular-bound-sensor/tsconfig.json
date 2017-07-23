@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "suppressImplicitAnyIndexErrors": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "stripInternal": true,
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+    "baseUrl": "."
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}

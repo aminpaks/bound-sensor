@@ -1,0 +1,9 @@
+{
+  "lerna": "2.0.0-rc.5",
+  "packages": [
+    "examples/*",
+    "modules/*"
+  ],
+  "npmClient": "npm",
+  "version": "1.0.1"
+}

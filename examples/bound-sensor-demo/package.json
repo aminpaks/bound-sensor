@@ -1,0 +1,31 @@
+{
+  "name": "bound-sensor-demo",
+  "private": true,
+  "author": "aminpaks <amin.pakseresht@hotmail.com>",
+  "license": "MIT",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "dependencies": {
+    "bound-sensor": "^1.0.0",
+    "core-js": "^2.4.1"
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.3",
+    "@types/webpack": "^2.2.16",
+    "css-loader": "^0.28.4",
+    "html-webpack-plugin": "^2.29.0",
+    "raw-loader": "^0.5.1",
+    "style-loader": "^0.18.2",
+    "ts-loader": "^2.2.0",
+    "ts-node": "^3.1.0",
+    "tslint": "^5.4.3",
+    "typescript": "^2.3.4",
+    "webpack": "^2.2.16",
+    "webpack-bundle-analyzer": "^2.8.2",
+    "webpack-dev-middleware": "^1.11.0",
+    "webpack-dev-server": "^2.5.0",
+    "webpack-hot-middleware": "^2.18.0"
+  }
+}

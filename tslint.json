@@ -1,7 +1,0 @@
-{
-  "rules": {
-    "quotemark": [true, "single"],
-    "trailing-comma": [true, { "multiline": "alway", "singleline": "never" }],
-    "indent": [true, "spaces"]
-  }
-}

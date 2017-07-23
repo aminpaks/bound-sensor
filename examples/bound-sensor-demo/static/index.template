@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>BoundSensor Demo</title>
+</head>
+<body>
+<div class="container">
+  <div id="holder">
+    <div id="child">
+      <button id="random-content">Generate random content</button>
+      <button id="detach-sensor">Detach sensor</button>
+      <div id="sample-text"></div>
+      <h4>Parent size:</h4>
+      <div id="el-width"></div>
+      <div id="el-height"></div>
+    </div>
+  </div>
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>

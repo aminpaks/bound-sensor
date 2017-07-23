@@ -1,0 +1,20 @@
+html,
+body {
+  display: flex;
+  flex: 1 1 100%;
+  min-height: 100%;
+  flex-direction: column;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+pre {
+  display: table;
+  margin: 0 auto;
+  padding: 6px 10px;
+  border: 1px solid #eee;
+  background-color: #fafafa;
+}
