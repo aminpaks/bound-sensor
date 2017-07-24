@@ -1,4 +1,6 @@
+/.rpt2_cache
 /node_modules
+/tsc-out
+/dist
 
 package-lock.json
-lerna-debug.log

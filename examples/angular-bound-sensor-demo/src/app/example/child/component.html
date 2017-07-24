@@ -1,0 +1,11 @@
+<div class="main-container">
+  <h3>Child component</h3>
+  <p>My resize event will notify me and my parent.</p>
+  <div class="size">
+    <div>My boundary size: {{myBoundSize}}</div>
+    <div>
+      <button (click)="dynamicContent()" [disabled]="!dynamicContentEnable">Add random contents</button>
+    </div>
+  </div>
+  <div class="dynamic-content" *ngIf="content.length > 0" [innerHtml]="content"></div>
+</div>

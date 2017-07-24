@@ -1,0 +1,40 @@
+:host {
+  display: block;
+  background-color: #fff;
+  border: 2px dashed #7788dd;
+  text-align: center;
+}
+
+.main-container {
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+}
+
+.size {
+  padding: 20px;
+  display: block;
+
+  div:first-of-type {
+    margin-bottom: 10px;
+  }
+}
+
+.dynamic-content {
+  padding: 20px;
+
+  & /deep/ span {
+    padding: 0 8px;
+    margin-bottom: 4px;
+    display: inline-block;
+    background-color: #eee;
+  }
+}
+
+p {
+  margin-top: 0;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}

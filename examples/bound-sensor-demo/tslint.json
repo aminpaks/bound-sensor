@@ -1,0 +1,15 @@
+{
+  "rules": {
+    "curly": true,
+    "eofline": true,
+    "no-empty": false,
+    "import-spacing": true,
+    "no-empty-interface": true,
+    "semicolon": [ "always" ],
+    "indent": [true, "spaces"],
+    "quotemark": [true, "single"],
+    "max-line-length": [ true, 140 ],
+    "comment-format": [ true, "check-space" ],
+    "trailing-comma": [true, { "multiline": "alway", "singleline": "never" }]
+  }
+}

@@ -1,0 +1,18 @@
+# IDE
+.vscode/
+.editorconfig
+.gitignore
+
+# Builds
+tsc-out/
+src/
+
+# Source Code
+*.ts
+!*.d.ts
+
+# Misc
+rollup-build.js
+tsconfig*.json
+tslint.json
+yarn.lock

@@ -1,0 +1,19 @@
+# Globals
+.editorconfig
+.gitignore
+.npmignore
+
+# Build
+builder/
+tsc-out/
+
+# Source Code
+src/
+*.ts
+!*.d.ts
+
+# Misc
+package-lock.json
+tsconfig*.json
+tslint.json
+yarn.lock
