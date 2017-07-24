@@ -2,6 +2,9 @@
 `bound-sensor` is a super lightweight JavaScript library to help you to make better applications.  
 This library is very useful if you want to refresh the content of a container once its boundary's size (width & height) changes.
 
+## Breaking Changes
+This package on NPM used to be for Angular, now they've been separated. If you want to install this lib for Angular you may [find it here as `angular-bound-sensor`](https://github.com/aminpaks/bound-sensor/tree/master/modules/angular-bound-sensor).
+
 ## Usage
 ```js
 import { BoundSensor, BoundSensorEvent } from 'bound-sensor';
