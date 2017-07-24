@@ -3,17 +3,16 @@
 .gitignore
 .npmignore
 
-# Node & Build
-/node_modules
-/builder
-/tsc-out
+# Build
+builder/
+tsc-out/
 
-# Source
-/src
+# Source Code
+src/
 *.ts
 !*.d.ts
 
-# Configs
+# Misc
 package-lock.json
 tsconfig*.json
 tslint.json

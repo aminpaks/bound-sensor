@@ -1,11 +1,17 @@
+# IDE
+.vscode/
 .editorconfig
+.gitignore
 
-/node_moduels
-/tsc-out
-/src
+# Builds
+tsc-out/
+src/
 
+# Source Code
 *.ts
 !*.d.ts
+
+# Misc
 rollup-build.js
 tsconfig*.json
 tslint.json
