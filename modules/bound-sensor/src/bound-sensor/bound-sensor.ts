@@ -10,7 +10,7 @@ import {
 } from './utils';
 
 import { BoundSensorDefaultOptions } from './constants';
-import { BoundSensorOptions, BoundSensorEventDetail } from './types';
+import { BoundSensorEventDetail, BoundSensorOptions } from './types';
 
 export class BoundSensor {
   private host: HTMLElement;
@@ -57,8 +57,8 @@ export class BoundSensor {
 
     frameStyle.width = '100%';
     frameStyle.height = '100%';
-    frameStyle.top = '-200%';
-    frameStyle.left = '-200%';
+    frameStyle.top = '0';
+    frameStyle.left = '0';
     frameStyle.border = 'none';
     frameStyle.zIndex = '-1';
     frameStyle.position = 'absolute';
