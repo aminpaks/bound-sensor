@@ -1,7 +1,7 @@
 {
   "name": "bound-sensor-demo",
   "private": true,
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
   "scripts": {

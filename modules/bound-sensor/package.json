@@ -1,6 +1,6 @@
 {
   "name": "bound-sensor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "BoundSensor is a JavaScript library to be notified if a DOM boundary changes in browser.",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
