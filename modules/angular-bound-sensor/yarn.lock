@@ -2,25 +2,29 @@
 # yarn lockfile v1
 
 
-"@angular/compiler-cli@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.1.3.tgz#c2362ffdf65756471481f839fab675bcac213f96"
+"@angular/compiler-cli@~4.2.0":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@angular/compiler-cli/-/compiler-cli-4.2.6.tgz#8a21352299f3ebd1e3f17581054164566ca306be"
   dependencies:
-    "@angular/tsc-wrapped" "4.1.3"
+    "@angular/tsc-wrapped" "4.2.6"
     minimist "^1.2.0"
     reflect-metadata "^0.1.2"
 
-"@angular/compiler@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.1.3.tgz#d2dd30853b0cf4a54758b4a314632c231f9c94c3"
+"@angular/compiler@~4.2.0":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@angular/compiler/-/compiler-4.2.6.tgz#667756d495ca0d45d2061268a10d52af839faff4"
+  dependencies:
+    tslib "^1.7.1"
 
-"@angular/core@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.1.3.tgz#285498eb86ab7d0b6f982f8f9f487ef610013b35"
+"@angular/core@~4.2.0":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@angular/core/-/core-4.2.6.tgz#0c1c8ff0157f076f4a7c0b721ca1423f1bbe164e"
+  dependencies:
+    tslib "^1.7.1"
 
-"@angular/tsc-wrapped@4.1.3":
-  version "4.1.3"
-  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.1.3.tgz#2d6372c9187bf1621eacd960b94b39c4f95293cd"
+"@angular/tsc-wrapped@4.2.6":
+  version "4.2.6"
+  resolved "https://registry.yarnpkg.com/@angular/tsc-wrapped/-/tsc-wrapped-4.2.6.tgz#60e44b5b38f3340ee14c54a58a7a07133c64e898"
   dependencies:
     tsickle "^0.21.0"
 
@@ -229,6 +233,10 @@ boom@2.x.x:
   resolved "https://registry.yarnpkg.com/boom/-/boom-2.10.1.tgz#39c8918ceff5799f83f9492a848f625add0c766f"
   dependencies:
     hoek "2.x.x"
+
+bound-sensor@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/bound-sensor/-/bound-sensor-1.0.2.tgz#6adeada8e732a3f6a0e6aa440adc06ecb4c96ebe"
 
 brace-expansion@^1.1.7:
   version "1.1.8"

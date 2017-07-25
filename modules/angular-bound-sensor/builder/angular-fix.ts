@@ -1,7 +1,7 @@
 import MagicString from 'magic-string';
 import { Plugin, SourceMap } from 'rollup';
 
-const importRegex = /import\s+((\{[^}]*\}\s+)|(\w+\s+))from\s+['"]([^'"]+)['"]/ig;
+const importRegex = /(import|export)\s*((\{[^}]*\}\s*)|(\w+\s*))from\s*['"]([^'"]+)['"]/ig;
 
 export function angularCmplFix() {
 
@@ -24,7 +24,7 @@ export function angularCmplFix() {
       let match;
 
       while ((match = importRegex.exec(code)) !== null) {
-        const moduleId = match[4];
+        const moduleId = match[5];
         const fix = fixImportee(moduleId);
 
         if (moduleId && fix) {
