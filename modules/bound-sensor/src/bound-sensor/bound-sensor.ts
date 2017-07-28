@@ -45,14 +45,19 @@ export class BoundSensor {
 
   prepareElementStyles(): void {
     this.host.style.position = 'relative';
+    this.host.style.display = 'block';
+  }
+
+  cleanElementStyles(): void {
+    this.host.style.position = '';
+    this.host.style.display = '';
   }
 
   addFrameElement(): boolean {
-    if (this.frame !== undefined) {
-      this.frame.remove();
+    if (!(this.frame instanceof HTMLIFrameElement)) {
+      this.frame = window.document.createElement('iframe');
     }
 
-    this.frame = window.document.createElement('iframe');
     const frameStyle = this.frame.style;
 
     frameStyle.width = '100%';
@@ -82,14 +87,14 @@ export class BoundSensor {
   }
 
   detachSensor(): boolean {
-    if (this.frame !== undefined) {
+    if (this.frame instanceof HTMLIFrameElement) {
       if (this.options.modifyStyles === true) {
-        this.host.style.position = '';
+        this.cleanElementStyles();
       }
       this.frame.contentWindow.removeEventListener('resize', this.debouncedEventHandler);
 
-      this.frame.remove();
-      return this.frame === undefined;
+      this.host.removeChild(this.frame);
+      return true;
     }
     return false;
   }

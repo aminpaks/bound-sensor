@@ -6,31 +6,43 @@ This library is very useful if you want to refresh the content of a container on
 This package on NPM used to be for Angular, now they've been separated. If you want to install this lib for Angular you may [find it here as `angular-bound-sensor`](https://github.com/aminpaks/bound-sensor/tree/master/modules/angular-bound-sensor).
 
 ## Usage
-```js
+```ts
 import { BoundSensor, BoundSensorEvent } from 'bound-sensor';
 
-// Our event name, you may name it anything
+/**
+ * Our event name, you may name it anything and we
+ * will receive it by the same name
+ */
 const eventName = 'resize';
 
-// Creates a new reference of bound-sensor
+// Creates a new copy of bound-sensor
 const sensor = new BoundSensor({
   // Name of event, this is a CustomEvent
   eventName,
-  // If you don't want bound-sensor manipulate the host styles
-  // you can set this to false and then you must add `position: relative`
-  // Manually to the host
+  /**
+   * If you don't want bound-sensor manipulate the host styles
+   * you can set this to false and then you must add two propertes
+   * to host element:
+   * 1. `position` to `relative`
+   * 2. `display` to `block`, `table` or `inline-block`
+   */
   modifyStyles: true,
-  // This value is amount of time in miliseconds to debounce the event
-  // This is quiet useful if you don't wanna receive too many events
-  // specially on resize windows or so...
-  // Here we'll be notified every seconds after last event
+  /**
+   * This value is amount of time in miliseconds to debounce the event
+   * This is quiet useful if you don't wanna receive too many events
+   * specially on resize windows or so...
+   * Here we'll be notified every seconds after last event
+   */
   debounceTime: 1000,
 });
 
 // Let's get the element that we want to attache the sensor to
 const holder = window.document.getElementById('holder');
 
-// Let's receive the resize event sent by bound-sensor by adding an event listeneer
+/**
+ * Let's receive the resize event sent by bound-sensor by adding an
+ * event listeneer to our host element
+ */
 holder.addEventListener(eventName, function (event: BoundSensorEvent) {
   // Here we receive the resize details from event
   // This will log: { width: x, height: x, host: `<div id="holder">` }
@@ -41,7 +53,7 @@ holder.addEventListener(eventName, function (event: BoundSensorEvent) {
 sensor.attachSensor(holder);
 
 // Let's detach the sensor after 10 seconds
-// You must detach the sensor to avoid memory leaks
+// We must detach the sensor to avoid memory leaks
 window.setTimeout(function () {
   sensor.detachSensor();
 }, 10000);

@@ -12,7 +12,7 @@ const eventName = 'resize';
 
 const bSensor = new BoundSensor({
   eventName,
-  modifyStyles: false,
+  modifyStyles: true,
   debounceTime: 10,
 });
 
@@ -42,7 +42,8 @@ randomContent.addEventListener('click', function () {
 });
 
 detachSensor.addEventListener('click', function () {
-  bSensor.detachSensor();
+  const result = bSensor.detachSensor();
+  console.log('Sensor should be detached', result);
 });
 
 bSensor.attachSensor(holder);
