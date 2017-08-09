@@ -1,4 +1,9 @@
 /**
+ * @license Utils
+ * (c) 2017 Amin Paks <amin.pakseresht@hotmail.com>
+ * License: MIT
+ */
+/**
  * Simple implementation of defaults
  * @param {Object} dest The result object
  * @param {Object} origin The origin object to clone from
@@ -57,4 +62,20 @@ class Debounce<T extends DebounceCallback> {
 
     return <T>result;
   }
+}
+
+/**
+ * Simple implementation of isNil
+ * @param value A value to check nullify
+ */
+export function isNil(value: any): boolean {
+  return value == null;
+}
+
+/**
+ * Checks if the value is a function
+ * @param value A value to check if it is function
+ */
+export function isFunction(value: any): boolean {
+  return (typeof value === 'function');
 }

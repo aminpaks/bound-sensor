@@ -1,12 +1,14 @@
 /**
- * @license BoundSensor
- * Amin Paks <amin.pakseresht@hotmail.com>
- * Lisense: MIT
+ * @license BoundSensor v1.0.4
+ * (c) 2017 Amin Paks <amin.pakseresht@hotmail.com>
+ * License: MIT
  */
 
-import {
+ import {
   debounce,
   defaults,
+  isFunction,
+  isNil,
 } from './utils';
 
 import { BoundSensorDefaultOptions } from './constants';
@@ -91,9 +93,17 @@ export class BoundSensor {
       if (this.options.modifyStyles === true) {
         this.cleanElementStyles();
       }
-      this.frame.contentWindow.removeEventListener('resize', this.debouncedEventHandler);
+      if (!isNil(this.frame.contentWindow)) {
+        const proto = Object.getPrototypeOf(this.frame.contentWindow);
 
-      this.host.removeChild(this.frame);
+        if (isFunction(proto.removeEventListener)) {
+          this.frame.contentWindow.removeEventListener('resize', this.debouncedEventHandler);
+        }
+      }
+
+      if (this.host instanceof HTMLElement) {
+        this.host.removeChild(this.frame);
+      }
       return true;
     }
     return false;
