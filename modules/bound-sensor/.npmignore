@@ -12,6 +12,7 @@ src/
 !*.d.ts
 
 # Misc
+package-lock.json
 rollup-build.js
 tsconfig*.json
 tslint.json
