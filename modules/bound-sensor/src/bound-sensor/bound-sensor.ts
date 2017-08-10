@@ -102,7 +102,15 @@ export class BoundSensor {
       }
 
       if (this.host instanceof HTMLElement) {
-        this.host.removeChild(this.frame);
+        /**
+         * Sometimes the element has been removed
+         * by its parent and we need to silently
+         * ignore the exception of removing the
+         * child.
+         */
+        try {
+          this.host.removeChild(this.frame);
+        } catch (_err) { }
       }
       return true;
     }
