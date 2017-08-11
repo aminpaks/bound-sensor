@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'root-component',
   template: `
-    <simple-component boundSensor></simple-component>
+    <simple-component [boundSensor]="{ modifyStyles: false }"></simple-component>
   `,
   styles: [`
     :host {

@@ -36,10 +36,12 @@ export class BoundSensorDirective implements OnInit, OnDestroy, OnChanges {
   private _options: BoundSensorSettings;
 
   @Input() boundSensor: BoundSensorSettings;
+  @HostBinding('style.display') _hostDisplayStyle: string;
   @HostBinding('style.position') _hostPositionStyle: string;
 
   constructor( @Inject(ElementRef) elementRef: ElementRef) {
     this._hostPositionStyle = '';
+    this._hostDisplayStyle = '';
     this._element = elementRef.nativeElement;
     this._options = Object.assign({}, BoundSensorDefaultOptions, { attachToParent: false });
   }
@@ -74,15 +76,17 @@ export class BoundSensorDirective implements OnInit, OnDestroy, OnChanges {
   }
 
   ngOnDestroy() {
-    this._sensor.detachSensor();
     this.removeHostStyles();
+    this._sensor.detachSensor();
   }
 
   updateHostStyles() {
     if (this._options.modifyStyles === true) {
       if (this._options.attachToParent === false) {
+        this._hostDisplayStyle = 'block';
         this._hostPositionStyle = 'relative';
       } else {
+        this._element.parentElement.style.display = 'block';
         this._element.parentElement.style.position = 'relative';
       }
     }
@@ -90,7 +94,11 @@ export class BoundSensorDirective implements OnInit, OnDestroy, OnChanges {
 
   removeHostStyles() {
     if (this._options.modifyStyles === true) {
-      if (this._options.attachToParent === true) {
+      if (this._options.attachToParent === false) {
+        this._hostDisplayStyle = '';
+        this._hostPositionStyle = '';
+      } else {
+        this._element.parentElement.style.display = '';
         this._element.parentElement.style.position = '';
       }
     }
