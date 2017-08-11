@@ -1,7 +1,7 @@
 {
   "name": "angular-bound-sensor-demo",
   "private": true,
-  "version": "1.0.5",
+  "version": "1.0.6",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
   "scripts": {
