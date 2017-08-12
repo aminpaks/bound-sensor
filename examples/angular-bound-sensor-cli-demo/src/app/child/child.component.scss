@@ -1,0 +1,24 @@
+@import '../../theme/variables';
+
+:host {
+  padding: 20px;
+  border: 2px dashed $primary-color-darker;
+
+  > h3 {
+    margin-top: 0;
+  }
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px;
+  margin-top: 1em;
+  justify-content: center;
+  border: 1px dotted $primary-color-lighter;
+
+  ::ng-deep span {
+    margin: 4px;
+    display: block;
+  }
+}

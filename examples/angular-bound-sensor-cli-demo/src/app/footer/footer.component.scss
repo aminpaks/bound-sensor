@@ -1,0 +1,7 @@
+@import '../../theme/variables';
+
+:host {
+  padding: 14px 20px;
+  font-family: 'Raleway', sans-serif;
+  background-color: $primary-color-lighter;
+}

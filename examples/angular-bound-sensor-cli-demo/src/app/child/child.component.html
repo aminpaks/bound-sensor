@@ -1,0 +1,14 @@
+<h3>Child Component</h3>
+<div class="row">
+  <div class="column">
+    <div class="detail"><span>My boundary size:</span> <em [class]="myBoundSizeClass">{{this.myBoundSize?.width}}x{{this.myBoundSize?.height}}</em></div>
+  </div>
+  <div class="column">
+    <div class="controls">
+      <button (click)="generateContents(); $event">Generate random contents</button>
+      <button (click)="removeContents(); $event">Remove contents</button>
+    </div>
+  </div>
+</div>
+
+<div class="contents" *ngIf="randomContents" [innerHtml]="randomContents"></div>

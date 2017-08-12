@@ -1,0 +1,14 @@
+@import '../../theme/variables';
+
+:host {
+  color: #fff;
+  display: block;
+
+  font-size: 3em;
+  font-weight: 600;
+  font-family: 'Raleway', sans-serif;
+
+  padding: 10px 20px;
+  background-color: $primary-color;
+  text-shadow: 0 0 6px rgba(#000, .2);
+}

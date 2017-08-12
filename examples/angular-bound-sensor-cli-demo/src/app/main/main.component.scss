@@ -1,0 +1,57 @@
+@import '../../theme/variables';
+
+:host {
+  padding: 20px;
+
+  &.grow {
+    flex: 1 1 100%;
+  }
+
+  > h3 {
+    margin-top: 0;
+  }
+
+  ::ng-deep {
+    .detail {
+      em {
+        padding: 0 8px;
+        font-style: normal;
+        position: relative;
+        display: inline-block;
+
+        &::after {
+          top: 50%;
+          left: 50%;
+          width: 0em;
+          height: 0em;
+          content: '';
+          display: block;
+          position: absolute;
+          border-radius: 50%;
+          background-color: rgba(#ddd, .2);
+          transform: translate(-50%, -50%);
+          transition: none;
+        }
+
+        &.flash {
+          &::after {
+            width: 8em;
+            height: 8em;
+            transition: 200ms;
+          }
+        }
+        &.fade-out {
+          &::after {
+            opacity: 0;
+            width: 10em;
+            height: 10em;
+          }
+        }
+      }
+    }
+  }
+}
+
+.child {
+  margin-top: 1em;
+}

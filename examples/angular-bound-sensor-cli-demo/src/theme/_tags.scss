@@ -1,0 +1,73 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex: 1 1 100%;
+  flex-direction: column;
+  min-height: 100%;
+
+  cursor: default;
+
+  font-family: 'Nunito', sans-serif;
+
+  @include IE-full-height();
+}
+
+body {
+  background-color: #fff;
+}
+
+a {
+  color: #000;
+  transition: 180ms ease-in-out;
+
+  &:hover {
+    color: $primary-color-darker;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.6em;
+  margin-bottom: 1em;
+  line-height: 1em;
+}
+h1,
+h2 {
+  line-height: 2em;
+}
+h3,
+h4,
+h5 {
+  line-height: 2em;
+}
+
+button {
+  font-size: .8em;
+  padding: 8px 12px;
+  display: inline-block;
+  background-color: #fff;
+  background-image: linear-gradient(to bottom, #e5ebee 0%,#ffffff 50%,#f2f4f7 78%,#f2f4f7 78%,#d7dee3 78%,#f5f7f9 100%);
+  background-size: 100% 200%;
+  border: 1px solid #ddd;
+  text-transform: uppercase;
+  outline: none;
+
+  transition: 140ms ease-out;
+
+  cursor: pointer;
+
+  &:hover {
+    background-position: 100% 100%;
+  }
+  &:focus {
+    border-color: $primary-color;
+    box-shadow: inset 0 0 12px rgba($primary-color, .3);
+  }
+}

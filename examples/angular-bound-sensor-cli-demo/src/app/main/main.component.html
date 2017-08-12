@@ -1,0 +1,15 @@
+<h3>Main Component</h3>
+<div class="row">
+  <div class="column">
+    <div class="detail"><span>My boundary size:</span> <em [class]="myBoundSizeClass">{{this.myBoundSize?.width}}x{{this.myBoundSize?.height}}</em></div>
+    <div class="detail"><span>My child boundary size:</span> <em [class]="myChildBoundSizeClass">{{this.myChildBoundSize?.width}}x{{this.myChildBoundSize?.height}}</em></div>
+  </div>
+  <div class="column">
+    <div class="controls">
+      <button (click)="setShouldIGrow(true); $event">Fit my parent</button>
+      <button (click)="setShouldIGrow(false); $event">Fit my content</button>
+    </div>
+  </div>
+</div>
+
+<app-child class="child" #child boundSensor></app-child>
