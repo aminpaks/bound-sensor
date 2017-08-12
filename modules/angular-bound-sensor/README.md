@@ -67,4 +67,4 @@ You may pass an object or its reference to directive to setup the sendor with sp
     ```
 
 ## Demo
-Take a look at this [example](http://embed.plnkr.co/pDJqcOBO91RKR8qiZNUy/) or [a very simple](http://embed.plnkr.co/kYRXPHT6rHc7dcLw0Pxo/) one at plunker.
+Take a look at this [live demo](https://aminpaks.github.io/bound-sensor/examples/angular-bound-sensor-cli-demo/dist/), and you can find [the source here](https://github.com/aminpaks/bound-sensor/tree/master/examples/angular-bound-sensor-cli-demo).
