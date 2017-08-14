@@ -1,7 +1,8 @@
 {
   "name": "angular-bound-sensor-cli-demo",
-  "version": "0.0.0",
+  "version": "1.0.7",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

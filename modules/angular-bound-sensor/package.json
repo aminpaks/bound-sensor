@@ -1,6 +1,6 @@
 {
   "name": "angular-bound-sensor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Find out once boundary size of element changes in Angular",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
