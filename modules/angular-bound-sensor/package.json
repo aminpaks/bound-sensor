@@ -32,9 +32,9 @@
     "bound-sensor": "^1.0.2"
   },
   "devDependencies": {
-    "@angular/compiler": "~4.1.0",
-    "@angular/compiler-cli": "~4.1.0",
-    "@angular/core": "~4.1.0",
+    "@angular/compiler": "^4.3.0",
+    "@angular/compiler-cli": "^4.3.0",
+    "@angular/core": "^4.3.0",
     "@types/node": "^8.0.8",
     "@types/rollup": "^0.41.1",
     "angular2-inline-template-style": "^1.1.0",

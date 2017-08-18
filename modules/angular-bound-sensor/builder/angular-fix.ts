@@ -1,22 +1,22 @@
 import MagicString from 'magic-string';
 import { Plugin, SourceMap } from 'rollup';
 
-const importRegex = /(import|export)\s*((\{[^}]*\}\s*)|(\w+\s*))from\s*['"]([^'"]+)['"]/ig;
+const importRegex = /(import|export)\s*((\{[^}]*\}|\*)(\s*as\s+\w+)?(\s+from)?\s*)?([`'"])(.*)\6/ig;
 
 export function angularCmplFix() {
 
-  function fixImportee(id) {
+  function fixImportee(id: string) {
     const parts = id.split(/[\/\\]/);
-    const first = parts.slice(0).shift();
+    const first = [...parts].shift();
     const last = parts.pop();
 
-    if (first !== '.' && last === 'index') {
+    if (first[0] !== '.' && last === 'index') {
       return parts.join('/');
     }
   }
 
   const plugin: Plugin = {
-    name: 'rollup-plugin-angular-cmpl-fix',
+    name: 'angular-fix',
     transform: function (code) {
       const source = new MagicString(code);
 
@@ -24,7 +24,7 @@ export function angularCmplFix() {
       let match;
 
       while ((match = importRegex.exec(code)) !== null) {
-        const moduleId = match[5];
+        const moduleId = match[7];
         const fix = fixImportee(moduleId);
 
         if (moduleId && fix) {
@@ -32,7 +32,7 @@ export function angularCmplFix() {
 
           const start = match.index;
           const end = start + match[0].length;
-          const replacement = code.substr(start, end).replace(moduleId, fix);
+          const replacement = code.substring(start, end).replace(moduleId, fix);
 
           source.overwrite(start, end, replacement);
         }

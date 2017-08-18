@@ -1,5 +1,5 @@
 /**
- * @license AngularBoundSensor v1.0.4
+ * @license AngularBoundSensor v1.0.7
  * (c) 2017 Amin Paks <amin.pakseresht@hotmail.com>
  * License: MIT
  */
