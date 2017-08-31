@@ -1,20 +1,19 @@
 {
   "compilerOptions": {
-    "allowJs": true,
-    "target": "es5",
-    "module": "commonjs",
+    "baseUrl": ".",
+    "target": "es2015",
+    "module": "es2015",
     "moduleResolution": "node",
-    "suppressImplicitAnyIndexErrors": true,
     "experimentalDecorators": true,
-    "noImplicitAny": false,
-    "stripInternal": true,
+    "noImplicitAny": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "lib": [
-      "es2017",
-      "dom"
-    ],
-    "baseUrl": "."
+      "dom",
+      "es2017"
+    ]
   },
-  "exclude": [
-    "node_modules"
+  "include": [
+    "src"
   ]
 }
