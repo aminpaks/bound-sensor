@@ -1,6 +1,6 @@
-/.rpt2_cache
-/node_modules
-/tsc-out
-/dist
+node_modules/
+.compile/
+tsc-out/
+dist/
 
-package-lock.json
+package-lock*

@@ -16,13 +16,13 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@1.3.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.3.0.tgz#140fe698508a8c023b4b7da01c0cc063cf711018"
+"@angular/cli@^1.3.2":
+  version "1.3.2"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.3.2.tgz#fb5e895621e32f053e757d97efa6d29954cef7fc"
   dependencies:
     "@angular-devkit/build-optimizer" "0.0.13"
     "@ngtools/json-schema" "1.1.0"
-    "@ngtools/webpack" "1.6.0"
+    "@ngtools/webpack" "1.6.2"
     autoprefixer "^6.5.3"
     chalk "^2.0.1"
     circular-dependency-plugin "^3.0.0"
@@ -155,9 +155,9 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@ngtools/json-schema/-/json-schema-1.1.0.tgz#c3a0c544d62392acc2813a42c8a0dc6f58f86922"
 
-"@ngtools/webpack@1.6.0":
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.6.0.tgz#6262f110283fcbfefa2ad45bc79c2c855c3963bb"
+"@ngtools/webpack@1.6.2":
+  version "1.6.2"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-1.6.2.tgz#70f2af1a59785d7abb9b4927a4aafdff2ef43a49"
   dependencies:
     loader-utils "^1.0.2"
     magic-string "^0.22.3"
@@ -640,6 +640,10 @@ boom@2.x.x:
 bound-sensor@^1.0.2:
   version "1.0.5"
   resolved "https://registry.yarnpkg.com/bound-sensor/-/bound-sensor-1.0.5.tgz#69b464407d9bff3519006946e6ded775c9a39821"
+
+bound-sensor@^1.0.6:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/bound-sensor/-/bound-sensor-1.0.7.tgz#a18c9b7c66462ceb2143a297aa5f23223ed9b730"
 
 brace-expansion@^1.1.7:
   version "1.1.8"

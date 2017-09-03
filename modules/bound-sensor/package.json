@@ -1,22 +1,17 @@
 {
   "name": "bound-sensor",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "BoundSensor is a JavaScript library to be notified if a DOM boundary changes in browser.",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
-  "main": "./dist/bundles/bound-sensor.min.js",
-  "module": "./dist/bound-sensor.es5.js",
-  "es2015": "./dist/bound-sensor.js",
-  "typings": "./dist/index.d.ts",
+  "main": "dist/bundles/bound-sensor.umd.js",
+  "module": "dist/bound-sensor.es5.js",
+  "es2015": "dist/bound-sensor.js",
+  "typings": "dist/bound-sensor.d.ts",
   "scripts": {
-    "clean": "npm-run-all clean:*",
-    "clean:dist": "rimraf dist",
-    "clean:tsc-out": "rimraf tsc-out",
-    "build:es2015": "tsc --module es2015 --declaration true --target es6 --outDir tsc-out/es2015",
-    "build:es5": "tsc --module es2015 --skipLibCheck false --target es5 --outDir tsc-out/es5",
-    "build:rollup": "node rollup-build.js",
     "lint": "tslint --project tsconfig.json --type-check 'src/**/*.ts'",
-    "bundle": "npm-run-all clean build:*"
+    "build": "tsb -p tsconfig.build.json",
+    "bundle": "npm-run-all lint build"
   },
   "repository": "https://github.com/aminpaks/bound-sensor/tree/master/modules/bound-sensor",
   "keywords": [
@@ -29,11 +24,8 @@
   "devDependencies": {
     "npm-run-all": "^4.0.2",
     "rimraf": "^2.6.1",
-    "rollup": "^0.43.1",
-    "rollup-plugin-node-resolve": "^3.0.0",
-    "rollup-plugin-uglify": "^2.0.1",
     "tslint": "^5.5.0",
     "typescript": "~2.3.4",
-    "uglify-js": "^3.0.25"
+    "typescript-library-bundler": "beta"
   }
 }

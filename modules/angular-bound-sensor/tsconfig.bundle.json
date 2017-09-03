@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist"
+  },
+  "files": [
+    "./src/public_api.ts"
+  ],
+  "bundlerOptions": {
+    "externals": {
+      "bound-sensor": "boundSensor"
+    }
+  }
+}

@@ -21,14 +21,14 @@ const sensor = new BoundSensor({
   eventName,
   /**
    * If you don't want bound-sensor manipulate the host styles
-   * you can set this to false and then you must add two properties
+   * you can set this to false and then you must add two propertes
    * to host element:
    * 1. `position` to `relative`
-   * 2. `display` to `block`, `table`, `inline-block` or `flex`
+   * 2. `display` to `block`, `table` or `inline-block`
    */
   modifyStyles: true,
   /**
-   * This value is amount of time in milliseconds to debounce the event
+   * This value is amount of time in miliseconds to debounce the event
    * This is quiet useful if you don't wanna receive too many events
    * specially on resize windows or so...
    * Here we'll be notified every seconds after last event
@@ -41,7 +41,7 @@ const holder = window.document.getElementById('holder');
 
 /**
  * Let's receive the resize event sent by bound-sensor by adding an
- * event listener to our host element
+ * event listeneer to our host element
  */
 holder.addEventListener(eventName, function (event: BoundSensorEvent) {
   // Here we receive the resize details from event
