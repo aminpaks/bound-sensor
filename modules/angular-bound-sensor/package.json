@@ -36,7 +36,7 @@
     "ts-node": "^3.2.0",
     "tslint": "^5.4.2",
     "typescript": "~2.3.4",
-    "typescript-library-bundler": "^0.0.7",
+    "typescript-library-bundler": "beta",
     "zone.js": "^0.8.0"
   }
 }
