@@ -1,6 +1,6 @@
 {
   "name": "angular-bound-sensor",
-  "version": "1.1.0-beta-1",
+  "version": "1.1.0",
   "description": "Find out once boundary size of element changes in Angular",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
@@ -19,7 +19,7 @@
     "resize event"
   ],
   "dependencies": {
-    "bound-sensor": "^1.0.7"
+    "bound-sensor": "^1.1.0"
   },
   "peerDependencies": {
     "@angular/core": ">= 4.0.0",
