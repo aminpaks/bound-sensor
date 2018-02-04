@@ -1,6 +1,6 @@
 {
   "name": "bound-sensor",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "BoundSensor is a JavaScript library to be notified if a DOM boundary changes in browser.",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
@@ -9,9 +9,10 @@
   "es2015": "dist/bound-sensor.js",
   "typings": "dist/bound-sensor.d.ts",
   "scripts": {
-    "lint": "tslint --project tsconfig.json --type-check 'src/**/*.ts'",
-    "build": "tsb -p tsconfig.build.json",
-    "bundle": "npm-run-all lint build"
+    "lint": "tslint --project tsconfig.json 'src/**/*.ts'",
+    "build": "tsb -p tsconfig.json",
+    "bundle": "npm-run-all lint build",
+    "prepublishOnly": "npm run-script bundle"
   },
   "repository": "https://github.com/aminpaks/bound-sensor/tree/master/modules/bound-sensor",
   "keywords": [
@@ -26,6 +27,6 @@
     "rimraf": "^2.6.1",
     "tslint": "^5.5.0",
     "typescript": "~2.3.4",
-    "typescript-library-bundler": "beta"
+    "typescript-library-bundler": "^0.2.3"
   }
 }
