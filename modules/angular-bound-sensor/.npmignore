@@ -1,9 +1,8 @@
-# Globals
-.editorconfig
-.gitignore
-.npmignore
+# Configs
+.*
 
 # Build
+.compile/
 builder/
 tsc-out/
 
@@ -13,7 +12,7 @@ src/
 !*.d.ts
 
 # Misc
-package-lock.json
-tsconfig*.json
-tslint.json
-yarn.lock
+package-*
+tsconfig*
+tslint*
+yarn*

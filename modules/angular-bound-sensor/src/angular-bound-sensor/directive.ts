@@ -1,5 +1,5 @@
 /**
- * @license AngularBoundSensor v1.0.7
+ * @license AngularBoundSensor v1.0.8
  * (c) 2017 Amin Paks <amin.pakseresht@hotmail.com>
  * License: MIT
  */
@@ -43,13 +43,13 @@ export class BoundSensorDirective implements OnInit, OnDestroy, OnChanges {
     this._hostPositionStyle = '';
     this._hostDisplayStyle = '';
     this._element = elementRef.nativeElement;
-    this._options = Object.assign({}, BoundSensorDefaultOptions, { attachToParent: false });
+    this._options = { ...BoundSensorDefaultOptions, attachToParent: false };
   }
 
   ngOnInit() {
     this.updateHostStyles();
     const host = this._options.attachToParent === true ? this._element.parentElement : this._element;
-    this._sensor = new BoundSensor(Object.assign({}, this._options, { modifyStyles: false }));
+    this._sensor = new BoundSensor(<BoundSensorOptions>{ ...this._options, modifyStyles: false });
     this._sensor.attachSensor(host);
   }
 

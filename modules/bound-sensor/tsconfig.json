@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "baseUrl": ".",
     "target": "es2015",
     "module": "es2015",
     "moduleResolution": "node",
@@ -8,10 +9,9 @@
     "noUnusedLocals": true,
     "noImplicitAny": true,
     "strictNullChecks": true,
-    "baseUrl": ".",
-    "lib": [
-      "es2015",
-      "dom"
-    ]
+    "skipLibCheck": true
+  },
+  "bundlerOptions": {
+    "entry": "./src/public_api.ts"
   }
 }
