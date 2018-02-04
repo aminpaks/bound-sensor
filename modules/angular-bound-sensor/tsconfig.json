@@ -8,12 +8,12 @@
     "noImplicitAny": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "lib": [
-      "dom",
-      "es2017"
-    ]
+    "skipLibCheck": true
   },
   "include": [
     "src"
-  ]
+  ],
+  "bundlerOptions": {
+    "entry": "src/public_api.ts"
+  }
 }

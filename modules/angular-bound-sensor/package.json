@@ -1,6 +1,6 @@
 {
   "name": "angular-bound-sensor",
-  "version": "1.0.7",
+  "version": "1.1.0-beta-1",
   "description": "Find out once boundary size of element changes in Angular",
   "author": "aminpaks <amin.pakseresht@hotmail.com>",
   "license": "MIT",
@@ -9,13 +9,12 @@
   "es2015": "dist/angular-bound-sensor.js",
   "typings": "dist/angular-bound-sensor.d.ts",
   "scripts": {
-    "bundle": "tsb --project tsconfig.bundle.json"
+    "bundle": "tsb --project ./tsconfig.json",
+    "prepublishOnly": "npm run-script bundle"
   },
   "repository": "https://github.com/aminpaks/bound-sensor/tree/master/modules/angular-bound-sensor",
   "keywords": [
     "angular",
-    "angular2",
-    "angular4",
     "container size",
     "resize event"
   ],
@@ -23,7 +22,7 @@
     "bound-sensor": "^1.0.7"
   },
   "peerDependencies": {
-    "@angular/core": ">= 2.4.3 < 5",
+    "@angular/core": ">= 4.0.0",
     "bound-sensor": ">= 1.0.0 < 2"
   },
   "devDependencies": {
@@ -36,7 +35,7 @@
     "ts-node": "^3.2.0",
     "tslint": "^5.4.2",
     "typescript": "~2.3.4",
-    "typescript-library-bundler": "beta",
+    "typescript-library-bundler": "^0.2.3",
     "zone.js": "^0.8.0"
   }
 }
